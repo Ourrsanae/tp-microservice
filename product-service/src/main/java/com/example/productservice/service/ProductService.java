@@ -23,7 +23,7 @@ public class ProductService {
         return new ProductDTO(saved.getProductId(), saved.getName(), saved.getWeight());
     }
 
-    //  ICI : ta méthode getProduct
+    //  ICI : la méthode getProduct
     public ProductDTO getProduct(Long id) {
         Product p = repo.findByProductId(id)
                 .orElseThrow(() -> new ProductNotFoundException("Produit introuvable : " + id));
